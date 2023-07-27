@@ -1,23 +1,115 @@
-/* .workoutButtons {
-
-} */
-
-.wholeBodyWorkoutButton {
-  background-color: #4caf50;
+@media (prefers-color-scheme: dark) {
+  body {
+    height: 100vh;
+    background: linear-gradient(
+        127deg,
+        rgba(0, 255, 0, 0.8),
+        rgba(0, 255, 0, 0) 70.71%
+      ),
+      linear-gradient(
+        336deg,
+        rgba(126, 232, 51, 0.8),
+        rgba(0, 0, 255, 0) 70.71%
+      );
+  }
 }
 
-.armWorkoutButton {
-  background-color: #4caf50;
+.sidebar {
+  font-size: large;
+  height: 70px;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  left: 950px;
+  padding: 15px;
+  padding-bottom: 100px;
+  background-color: #9efafa;
+  box-shadow: -3px 5px 10px 0.1px black;
 }
 
-.absWorkoutButton {
-  background-color: #4caf50;
+.iconButton {
+  font-size: large;
+  padding: 7px;
+  width: 101px;
+  position: relative;
+  top: 100px;
+  left: -150px;
+  height: 30px;
+  border: #00f7f9;
+  border-radius: 10px;
+  box-shadow: 3.5px 6px 5px 0.1px rgba(0, 0, 0, 0.25);
 }
 
-.legsWorkoutButton {
-  background-color: #4caf50;
+.iconButton:active {
+  background-color: purple;
 }
 
-.wholeBodyStretchButton {
-  background-color: #4caf50;
+.homeCreateWorkoutLink {
+  background-color: #ff9e3d;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 40px;
+}
+
+.homeEditWorkoutLink {
+  margin-right: 40px;
+  background-color: #ff9e3d;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.homeWorkoutScheduleLink {
+  background-color: #ff9e3d;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 40px;
+}
+
+.homeStartWorkoutLink {
+  background-color: #ff9e3d;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.homeAppDescription {
+  padding: 10px;
+  margin-right: 410px;
+  padding-bottom: 50px;
+  font-size: large;
+}
+
+.homeCreateDrillLink {
+  margin: 70px;
+  background-color: #ff9e3d;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 40px;
+}
+
+.sumthin {
+  margin-right: 1010px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: pink;
+}
+
+.quackTheEgg {
+  height: 600px;
+  position: absolute;
+  left: 400px;
+}
+
+.setHr {
+  width: 00px;
+  position: relative;
+  display: flex;
+  right: 540px;
+}
+
+.workoutCard {
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  margin-right: 920px;
 }
