@@ -1,6 +1,6 @@
 "use client";
 
-import Set from "../set";
+import Set from "../../components/set";
 import PropTypes from "prop-types";
 
 const propTypes = {

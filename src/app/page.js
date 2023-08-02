@@ -1,6 +1,20 @@
 import IconButton from "@/components/icon-button";
 
 export default function Home({ tigga }) {
+
+
+const  stopwatch = Math.round(Date.now()/1000);
+
+
+  // const start = Date.now();
+  // console.log('starting timer...');
+  // setTimeout(() => {
+  //   const millis = Date.now() - start;
+  //   console.log(`seconds elapsed = ${Math.floor(millis / 1000)}`);
+  // }, 2000);
+
+  // setTimeout(3000);
+
   return (
     <>
       <h1 className="homeTitle"> Levi's Workout App</h1>

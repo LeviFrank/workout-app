@@ -2,42 +2,42 @@ import { NextResponse } from 'next/server'
 
 export async function GET(request, { params }) {
   // console.log(params.id);
-
   // console.log("Hello Levi");
 
   const workoutA = {
     workoutDefinition: {
-      name: "foo name",
-      description: "foo description",
+      name: "workout a",
+      description: "workout a description",
       sets: [
         {
-          name: "zoo name",
-          description: "zoo description",
-          weight: "zoo weight",
-          reps: "zoo reps"
+          name: "Curls",
+          description: "Hold a dumbell in hand and curl weight to shoulder.",
+          weight: "30 pounders",
+          reps: "14"
         },
         {
-          name: "zoo 2 name",
-          description: "zoo 2 description",
-          weight: "zoo 2 weight",
-          reps: "zoo 2 reps"
+          name: "Weighted Lunges",
+          description: "Normal lunges, except you carry dumbells in your hands.",
+          weight: "50 pounders",
+          reps: "22"
         }
       ]
     },
     history: [
       {
-        date: "blah name", // Date.now()?
-        setsDone: ["benchpress-heavy", "squat-light"]
+        date: "2004-09-04",
+        description: "Good for legs and arms, but I wish it hit my core and chest more.",
+        setsDone: ["Curls"]
       },
       {
-        date: "blah 2 name",
-        setsDone: ["benchpress-very-heavy", "squat-very-light"]
+        date: "2011-01-19",
+        description: "Pretty easy workout, I wish it was harder",
+        setsDone: ["Weighted Lunges", "Curls"]
       }
     ]
   };
 
-  // TODO: Make a switch statement to assign workout to...?
-
+  
   const workoutB = {
     workoutDefinition: {
       name: "Workout B",
@@ -59,18 +59,34 @@ export async function GET(request, { params }) {
     },
     history: [
       {
-        date: "2-9-2017",
-        description: "Hardest workout I have ever done!"
+        date: "2010-08-07",
+        description: "Hardest workout I have ever done!",
+        setsDone: ["Weighted Pushups"]
       },
       {
-        date: "3-29-2019",
-        description: "A nice variety of stuff I have not done in a while"
+        date: "1938-10-04",
+        description: "A nice variety of stuff I have not done in a while",
+        setsDone: ["Benchpress", "Weighted Pushups"]
       }
     ]
   }
-
+  
+  let workout = null;
 
   // return NextResponse.json({ id: params.id });
+  // TODO: Make a switch statement to assign workout to...?
+  switch (params.id) {
+    case "a":
+      workout = workoutA;
+      break;
+    case "b":
+      workout = workoutB;
+      break;
+    default:
+      console.error("Sorry, that workout does not exist");
+      break;
+  }
+  
   return NextResponse.json(workout);
 }
 
